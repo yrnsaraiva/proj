@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes - Minha Base de Dados Local</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-5">
+            <img height="30" src="img/IMDB_Logo_2016.svg.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+            <form class="d-flex mx-5" role="search">
+                <input class="form-control me-2 rounded-0 px-3" id="searchQuery" type="search"
+                       placeholder="Pesquisar" aria-label="Search" onkeyup="searchMovies()">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+            <div id="form-container" class="mb-4">
+                <input type="text" id="movieName" class="form-control shadow-sm" placeholder="Nome do Filme" required>
+                <input type="text" id="movieCategory" class="form-control my-2" placeholder="Categoria" required>
+                <input type="number" id="movieYear" class="form-control my-2" placeholder="Ano de Lançamento" required>
+                <input type="url" id="movieImage" class="form-control my-2" placeholder="Link para Imagem">
+                <button id="saveMovie" class="btn rounded-0 btn-block my-2"
+                        style="border-color: #F6C800; color: #F6C800">Salvar Filme
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Lista de filmes -->
+    <div id="movieList" class="row">
+
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
